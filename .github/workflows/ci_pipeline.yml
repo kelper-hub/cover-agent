@@ -54,7 +54,7 @@ jobs:
       - name: Install Poetry
         run: pip install poetry
       - name: Install dependencies using Poetry
-        run: poetry install > logs.txt
+        run: poetry install &> logs.txt
       - name: Upload poetry logs
         uses: actions/upload-artifact@v3
         if: always()
