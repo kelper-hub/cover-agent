@@ -54,7 +54,9 @@ jobs:
       - name: Install Poetry
         run: pip install poetry
       - name: Install dependencies using Poetry
-        run: poetry install
+        run: |
+          poetry config installer.timeout 300
+          poetry install
       - name: Run tests and generate reports
         env:
           OPENAI_API_KEY: "This_is_a_fake_API_key"
