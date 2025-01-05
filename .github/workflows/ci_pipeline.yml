@@ -55,7 +55,7 @@ jobs:
         run: pip install poetry
       - name: Install dependencies using Poetry
         run: |
-          poetry config installer.timeout 300
+          export PIP_DEFAULT_TIMEOUT=300
           poetry install
       - name: Run tests and generate reports
         env:
