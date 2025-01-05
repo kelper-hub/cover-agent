@@ -55,8 +55,11 @@ jobs:
         run: pip install poetry
       - name: Install dependencies using Poetry
         run: poetry install > logs.txt
-        with: 
-          name: logs
+      - name: Upload poetry logs
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: poetry-logs
           path: logs.txt
       - name: Run tests and generate reports
         env:
