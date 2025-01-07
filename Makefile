@@ -25,10 +25,14 @@ installer:
 		--add-data "$(SITE_PACKAGES)/vendor:wandb/vendor" \
 		--add-data "build_helpers/anthropic_tokenizer.json:litellm/litellm_core_utils/tokenizers" \
 <<<<<<< HEAD
+<<<<<<< HEAD
 		--add-data "$(DIFF_COVER_TEMPLATES):diff_cover/templates" \
 =======
 		--add-data "$(DIFF_COVER_TEMPLATES)/diff_cover/templates:diff_cover/templates" \
 >>>>>>> 82446de (Adding data to fix diff-cover jinja tenplates issue)
+=======
+		--add-data "$(DIFF_COVER_TEMPLATES):diff_cover/templates" \
+>>>>>>> 798ec11 (fixing diff cover location)
 		--hidden-import=tiktoken_ext.openai_public \
 		--hidden-import=tiktoken_ext \
 		--hidden-import=wandb \
